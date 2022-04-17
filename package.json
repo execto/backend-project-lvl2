@@ -4,7 +4,9 @@
   "description": "[![Actions Status](https://github.com/execto/backend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/execto/backend-project-lvl2/actions)",
   "main": "src/index.js",
   "type": "module",
-  "bin": "bin/gendiff.js",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +26,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "commander": "^9.2.0"
   }
 }
