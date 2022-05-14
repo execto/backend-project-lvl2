@@ -28,6 +28,7 @@
     "prettier": "2.6.2"
   },
   "dependencies": {
-    "commander": "^9.2.0"
+    "commander": "^9.2.0",
+    "lodash": "^4.17.21"
   }
 }
