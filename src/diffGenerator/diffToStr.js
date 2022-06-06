@@ -1,4 +1,4 @@
-import { DiffState } from '../enums/index.js';
+import DiffState from '../enums/index.js';
 
 const diffToStr = (diff) => {
   const diffsAsStr = diff

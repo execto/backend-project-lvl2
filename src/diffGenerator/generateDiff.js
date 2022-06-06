@@ -2,7 +2,7 @@ import intersection from 'lodash/intersection.js';
 import difference from 'lodash/difference.js';
 import sortBy from 'lodash/sortBy.js';
 
-import { DiffState } from '../enums/index.js';
+import DiffState from '../enums/index.js';
 
 const generateDiff = (firstStruct, secondStruct) => {
   const firstStructKeys = Object.keys(firstStruct);

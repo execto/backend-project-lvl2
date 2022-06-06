@@ -1,3 +1,3 @@
 import DiffState from './DiffStatus.js';
 
-export { DiffState };
+export default DiffState;
