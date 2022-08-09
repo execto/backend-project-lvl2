@@ -3,10 +3,12 @@ env:
 
 plugins:
   - 'prettier'
+  - 'jest'
 
 extends:
   - 'airbnb-base'
   - 'prettier'
+  - 'plugin:jest/recommended'
 
 parserOptions:
   ecmaVersion: latest
@@ -15,3 +17,4 @@ rules:
   no-console: off
   import/extensions: off
   prettier/prettier: 'error'
+  no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
