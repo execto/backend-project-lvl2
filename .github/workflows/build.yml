@@ -5,6 +5,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: build
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -13,4 +14,19 @@ jobs:
           cache: npm
       - run: npm ci
       - run: make lint
-      - run: make test
+  test:
+    needs: build
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 16
+        cache: npm
+    - run: npm ci
+    - uses: paambaati/codeclimate-action@v2.2.4
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_TEST_COVERAGE }}
+      with:
+        coverageCommand: make test
