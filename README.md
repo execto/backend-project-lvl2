@@ -11,3 +11,7 @@
 ### Build
 
 [![build](https://github.com/execto/backend-project-lvl2/actions/workflows/build.yml/badge.svg)](https://github.com/execto/backend-project-lvl2/actions/workflows/build.yml)
+
+### Demo
+
+[![asciicast](https://asciinema.org/a/F3qznY75LYiyD2VZw5lTxrN93.svg)](https://asciinema.org/a/F3qznY75LYiyD2VZw5lTxrN93)
