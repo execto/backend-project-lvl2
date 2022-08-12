@@ -40,9 +40,18 @@ const expectedResult = [
   },
 ];
 
-test('generate diff', () => {
+test('generate diff from json', () => {
   const file1Path = getFixturePath('file1.json');
   const file2Path = getFixturePath('file2.json');
+  const file1Struct = readFile(file1Path);
+  const file2Struct = readFile(file2Path);
+
+  expect(generateDiff(file1Struct, file2Struct)).toStrictEqual(expectedResult);
+});
+
+test('generate diff from yaml', () => {
+  const file1Path = getFixturePath('file1.yaml');
+  const file2Path = getFixturePath('file2.yml');
   const file1Struct = readFile(file1Path);
   const file2Struct = readFile(file2Path);
 
