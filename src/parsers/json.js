@@ -1,3 +1,3 @@
-const parseJson = (jsonString) => JSON.parse(jsonString);
+const parseJson = (content) => JSON.parse(content);
 
 export default parseJson;
