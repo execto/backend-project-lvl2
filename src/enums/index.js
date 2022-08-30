@@ -1,3 +1,4 @@
 import DiffState from './DiffStatus.js';
+import DiffType from './DiffType.js';
 
-export default DiffState;
+export { DiffState, DiffType };
