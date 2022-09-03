@@ -1,6 +1,5 @@
 import isArray from 'lodash/isArray.js';
-import isBoolean from 'lodash/isBoolean.js';
-import isNull from 'lodash/isNull.js';
+import isString from 'lodash/isString.js';
 
 import { DiffState, DiffType } from '../enums/index.js';
 import isObject from '../utils/lang.js';
@@ -14,11 +13,11 @@ const formatValue = (value) => {
     return JSON.stringify(value);
   }
 
-  if (isBoolean(value) || isNull(value)) {
-    return `${value}`;
+  if (isString(value)) {
+    return `'${value}'`;
   }
 
-  return `'${value}'`;
+  return `${value}`;
 };
 
 const plain = (diff) => {
