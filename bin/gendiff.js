@@ -11,11 +11,10 @@ program.version('1.0.0');
 program
   .argument('<filepath1>')
   .argument('<filepath2>')
-  .option('-f, --format <type>', 'output format, stylized or json')
-  .option('-fr, --formatter <type>', 'formatter for diff: [stylish, plain]', 'stylish')
+  .option('-f, --format <type>', 'format for diff: [stylish, plain, json]', 'stylish')
   .action((filepath1, filepath2, options) => {
-    const { formatter } = options;
-    const diff = genDiff(filepath1, filepath2, formatter);
+    const { format } = options;
+    const diff = genDiff(filepath1, filepath2, format);
     console.log(diff);
   });
 

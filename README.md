@@ -14,8 +14,12 @@
 
 ### Demo with stylish formatter
 
-[![asciicast](https://asciinema.org/a/2vqA9a5vSPtaP8n8ywaDjRzJz.svg)](https://asciinema.org/a/2vqA9a5vSPtaP8n8ywaDjRzJz)
+[![asciicast](https://asciinema.org/a/EWlluqJh0QJ4nu9FKrgjwwKSL.svg)](https://asciinema.org/a/EWlluqJh0QJ4nu9FKrgjwwKSL)
 
 ### Demo with plain formatter
 
-[![asciicast](https://asciinema.org/a/kMKG4e1a2TSY6EyMitMRb1ZIg.svg)](https://asciinema.org/a/kMKG4e1a2TSY6EyMitMRb1ZIg)
+[![asciicast](https://asciinema.org/a/JECkekkrXeHd6vyhgNpd81xdV.svg)](https://asciinema.org/a/JECkekkrXeHd6vyhgNpd81xdV)
+
+### Demo with json formatter
+
+[![asciicast](https://asciinema.org/a/IxLBmmeQCAOKBhJ5zmDAsRXbx.svg)](https://asciinema.org/a/IxLBmmeQCAOKBhJ5zmDAsRXbx)
