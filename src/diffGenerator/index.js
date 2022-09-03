@@ -32,32 +32,35 @@ const generateDiff = (firstStruct, secondStruct) => {
     if (isObject(firstStructValue) && isObject(secondStructValue)) {
       const property = {
         key,
-        meta: {},
+        value: generateDiff(firstStructValue, secondStructValue),
+        meta: {
+          type: DiffType.nested,
+        },
       };
-      property.value = generateDiff(firstStructValue, secondStructValue);
-      property.meta.type = DiffType.nested;
       return property;
     }
 
     if (firstStructValue === secondStructValue) {
       const property = {
         key,
-        meta: {},
+        value: firstStructValue,
+        meta: {
+          state: DiffState.unchanged,
+          type: DiffType.plain,
+        },
       };
-      property.meta.state = DiffState.unchanged;
-      property.meta.type = DiffType.plain;
-      property.value = firstStructValue;
       return property;
     }
 
     const property = {
       key,
-      meta: {},
+      oldValue: firstStructValue,
+      newValue: secondStructValue,
+      meta: {
+        state: DiffState.changed,
+        type: DiffType.plain,
+      },
     };
-    property.meta.state = DiffState.changed;
-    property.meta.type = DiffType.plain;
-    property.oldValue = firstStructValue;
-    property.newValue = secondStructValue;
     return property;
   });
 
