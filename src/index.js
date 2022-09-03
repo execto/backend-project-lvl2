@@ -8,7 +8,7 @@ const genDiff = (filepath1, filepath2) => {
   const diff = generateDiff(file1Struct, file2Struct);
   const diffStr = diffToStr(diff);
 
-  console.log(diffStr);
+  console.log(diffStr.replace(/\n/g, '\\n').replace(/\t/, '\\t'));
 };
 
 export default genDiff;
