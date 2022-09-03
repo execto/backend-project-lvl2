@@ -23,18 +23,17 @@ const formatValue = (value) => {
 const plain = (diff) => {
   const iter = (diffStruct, path) => {
     const result = diffStruct.reduce((acc, diffItem) => {
-      const { key, value, oldValue, newValue, meta } = diffItem;
-      const { state, type } = meta;
+      const { state, type } = diffItem.meta;
 
       if (type === DiffType.nested) {
-        const lines = iter(value, [...path, key]);
+        const lines = iter(diffItem.value, [...path, diffItem.key]);
         return [...acc, ...lines];
       }
 
-      const currentPath = [...path, key].join('.');
-      const formattedValue = formatValue(value);
-      const oldFormattedValue = formatValue(oldValue);
-      const newFormattedValue = formatValue(newValue);
+      const currentPath = [...path, diffItem.key].join('.');
+      const formattedValue = formatValue(diffItem.value);
+      const oldFormattedValue = formatValue(diffItem.oldValue);
+      const newFormattedValue = formatValue(diffItem.newValue);
 
       if (state === DiffState.added) {
         const line = `Property '${currentPath}' was added with value: ${formattedValue}`;

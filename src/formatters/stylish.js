@@ -9,7 +9,7 @@ const formatValue = (value, spaces) => {
     const indent = REPLACER.repeat(spaces);
     const endBracketIndent = REPLACER.repeat(spaces - DEFAULT_SPACES);
     const lines = Object.entries(value).map(
-      ([key, propValue]) => `${indent}${key}: ${formatValue(propValue, spaces + DEFAULT_SPACES)}`
+      ([key, propValue]) => `${indent}${key}: ${formatValue(propValue, spaces + DEFAULT_SPACES)}`,
     );
 
     return ['{', ...lines, `${endBracketIndent}}`].join('\n');

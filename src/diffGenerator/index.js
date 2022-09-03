@@ -29,24 +29,31 @@ const generateDiff = (firstStruct, secondStruct) => {
     const firstStructValue = firstStruct[key];
     const secondStructValue = secondStruct[key];
 
-    const property = {
-      key,
-      meta: {},
-    };
-
     if (isObject(firstStructValue) && isObject(secondStructValue)) {
+      const property = {
+        key,
+        meta: {},
+      };
       property.value = generateDiff(firstStructValue, secondStructValue);
       property.meta.type = DiffType.nested;
       return property;
     }
 
     if (firstStructValue === secondStructValue) {
+      const property = {
+        key,
+        meta: {},
+      };
       property.meta.state = DiffState.unchanged;
       property.meta.type = DiffType.plain;
       property.value = firstStructValue;
       return property;
     }
 
+    const property = {
+      key,
+      meta: {},
+    };
     property.meta.state = DiffState.changed;
     property.meta.type = DiffType.plain;
     property.oldValue = firstStructValue;
@@ -56,7 +63,7 @@ const generateDiff = (firstStruct, secondStruct) => {
 
   const diff = sortBy(
     [...addedProperties, ...deletedProperties, ...intersectionProperties],
-    ['key']
+    ['key'],
   );
 
   return diff;
