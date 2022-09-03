@@ -12,6 +12,10 @@
 
 [![build](https://github.com/execto/backend-project-lvl2/actions/workflows/build.yml/badge.svg)](https://github.com/execto/backend-project-lvl2/actions/workflows/build.yml)
 
-### Demo
+### Demo with stylish formatter
 
 [![asciicast](https://asciinema.org/a/2vqA9a5vSPtaP8n8ywaDjRzJz.svg)](https://asciinema.org/a/2vqA9a5vSPtaP8n8ywaDjRzJz)
+
+### Demo with plain formatter
+
+[![asciicast](https://asciinema.org/a/kMKG4e1a2TSY6EyMitMRb1ZIg.svg)](https://asciinema.org/a/kMKG4e1a2TSY6EyMitMRb1ZIg)

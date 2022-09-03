@@ -12,7 +12,7 @@ program
   .argument('<filepath1>')
   .argument('<filepath2>')
   .option('-f, --format <type>', 'output format, stylized or json')
-  .option('-fr, --formatter <type>', 'formatter for diff', 'stylish')
+  .option('-fr, --formatter <type>', 'formatter for diff: [stylish, plain]', 'stylish')
   .action(genDiff);
 
 program.parse();

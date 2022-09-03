@@ -1,17 +1,10 @@
 import generateDiff from './diffGenerator/index.js';
 import { readFile } from './utils/files.js';
-import stylish from './formatters/stylish.js';
-
-const formatters = {
-  stylish,
-};
+import getFormatter from './formatters/index.js';
 
 const genDiff = (filepath1, filepath2, options) => {
   const { formatter } = options;
-  const selectedFormatter = formatters[formatter];
-  if (!selectedFormatter) {
-    throw new Error('unavailable formatter');
-  }
+  const selectedFormatter = getFormatter(formatter);
 
   const file1Struct = readFile(filepath1);
   const file2Struct = readFile(filepath2);
