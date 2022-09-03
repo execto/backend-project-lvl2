@@ -14,4 +14,4 @@
 
 ### Demo
 
-[![asciicast](https://asciinema.org/a/F3qznY75LYiyD2VZw5lTxrN93.svg)](https://asciinema.org/a/F3qznY75LYiyD2VZw5lTxrN93)
+[![asciicast](https://asciinema.org/a/2vqA9a5vSPtaP8n8ywaDjRzJz.svg)](https://asciinema.org/a/2vqA9a5vSPtaP8n8ywaDjRzJz)

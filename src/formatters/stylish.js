@@ -22,7 +22,7 @@ const formatValue = (value, spaces) => {
   return `${value}`;
 };
 
-const diffToStr = (diff) => {
+const stylish = (diff) => {
   const iter = (currentDiff, spaces) => {
     const indent = REPLACER.repeat(spaces);
     const indentForDiff = REPLACER.repeat(spaces - 2);
@@ -67,4 +67,4 @@ const diffToStr = (diff) => {
   return iter(diff, DEFAULT_SPACES);
 };
 
-export default diffToStr;
+export default stylish;

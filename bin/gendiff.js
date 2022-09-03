@@ -11,7 +11,8 @@ program.version('1.0.0');
 program
   .argument('<filepath1>')
   .argument('<filepath2>')
-  .option('-f, --format <type>', 'output format')
+  .option('-f, --format <type>', 'output format, stylized or json')
+  .option('-fr, --formatter <type>', 'formatter for diff', 'stylish')
   .action(genDiff);
 
 program.parse();

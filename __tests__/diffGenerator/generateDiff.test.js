@@ -2,7 +2,7 @@ import { expect, test } from '@jest/globals';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
-import generateDiff from '../../src/diffGenerator/generateDiff.js';
+import generateDiff from '../../src/diffGenerator/index.js';
 import { readFile } from '../../src/utils/files.js';
 
 const __filename = fileURLToPath(import.meta.url);
