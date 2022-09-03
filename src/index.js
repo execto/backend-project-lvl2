@@ -1,9 +1,9 @@
 import generateDiff from './diffGenerator/index.js';
 import { readFile } from './utils/files.js';
 import getFormatter from './formatters/index.js';
+import Formatter from './enums/Formatter.js';
 
-const genDiff = (filepath1, filepath2, options) => {
-  const { formatter } = options;
+const genDiff = (filepath1, filepath2, formatter = Formatter.stylish) => {
   const selectedFormatter = getFormatter(formatter);
 
   const file1Struct = readFile(filepath1);
@@ -12,7 +12,7 @@ const genDiff = (filepath1, filepath2, options) => {
   const diff = generateDiff(file1Struct, file2Struct);
   const diffStr = selectedFormatter(diff);
 
-  console.log(diffStr);
+  return diffStr;
 };
 
 export default genDiff;
